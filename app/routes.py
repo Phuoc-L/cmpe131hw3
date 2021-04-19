@@ -21,17 +21,15 @@ def home():
         db.session.add(new_message)
         db.session.commit()
     
-
+    # A starter conversation that is not in the data tables
     posts = [
-        {   'author':'carlos', 
+        {   'author':'Carlos', 
             'message':'Yo! Where you at?!'
         },
         {   'author':'Jerry', 
             'message':'Home. You?'}
     ]
 
-    
-    '''f'{Messages.query.filter_by(id = onemessage.user_id.data).first()}','''
     # output all messages
     # create a list of dictionaries with the following structure
     # [{'author':'carlos', 'message':'Yo! Where you at?!'},

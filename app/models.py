@@ -1,5 +1,15 @@
 from app import db
 
+'''
+The data table for all of the users
+
+columns
+------
+id : Integer
+    A unique identifier that is given to each user
+author : String
+    The name of this user
+'''
 class User(db.Model):
     # have the following columns
     # id (int)
@@ -12,6 +22,18 @@ class User(db.Model):
     def __repr__(self):
         return f'<User: {self.author}>'
 
+'''
+The message table for all posted messages
+
+columns
+------
+id : Integer
+    A unique identifier that is given to each message
+message : String
+    The content of this message
+user_id : Integer
+    The id of the user who posted this message
+'''
 class Messages(db.Model):
     # have the following columns
     # id (int)
